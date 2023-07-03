@@ -9,38 +9,41 @@
 </head>
 <body>
     <table>
-        <tr class="input-text">
-            <td colspan="4"><input type="text" value="0"></td>
+        <tr>
+            <td class="calc-screen" colspan="4">
+                <div class="prev-screen" id="previousScreen"></div>
+                <div class="current-screen" id="currentScreen">0</div>
+            </td>
         </tr>
         <tr>
-            <td><button data-key="clear" class="func">AC</button></td>
-            <td><button data-key="sign" class="func">+/-</button></td>
-            <td><button data-key="percent" class="func">%</button></td>
-            <td><button data-key="divide" class="operator">/</button></td>
+            <td><button id="clearBtn" class="func">AC</button></td>
+            <td><button id="signBtn" class="func">+/-</button></td>
+            <td><button id="percentBtn" class="func">%</button></td>
+            <td><button data-operator class="operator">/</button></td>
         </tr>
         <tr>
-            <td><button data-key="7" class="digit">7</button></td>
-            <td><button data-key="8" class="digit">8</button></td>
-            <td><button data-key="9" class="digit">9</button></td>
-            <td><button data-key="multiply" class="operator">*</button></td>
+            <td><button data-number class="digit">7</button></td>
+            <td><button data-number class="digit">8</button></td>
+            <td><button data-number class="digit">9</button></td>
+            <td><button data-operator class="operator">*</button></td>
         </tr>
         <tr>
-            <td><button data-key="sign" class="digit">4</button></td>
-            <td><button data-key="sign" class="digit">5</button></td>
-            <td><button data-key="sign" class="digit">6</button></td>
-            <td><button data-key="sign" class="operator">-</button></td>
+            <td><button data-number class="digit">4</button></td>
+            <td><button data-number class="digit">5</button></td>
+            <td><button data-number class="digit">6</button></td>
+            <td><button data-operator class="operator">-</button></td>
         </tr>
         <tr>
-            <td><button data-key="1" class="digit">1</button></td>
-            <td><button data-key="2" class="digit">2</button></td>
-            <td><button data-key="3" class="digit">3</button></td>
-            <td><button data-key="add" class="operator">+</button></td>
+            <td><button data-number class="digit">1</button></td>
+            <td><button data-number class="digit">2</button></td>
+            <td><button data-number class="digit">3</button></td>
+            <td><button data-operator class="operator">+</button></td>
         </tr>
         <tr>
-            <td><button data-key="0" class="digit">0</button></td>
-            <td><button data-key="." class="digit">.</button></td>
-            <td><button data-key="delete" class="func">DEL</button></td>
-            <td><button data-key="equal" class="operator">=</button></td>
+            <td><button data-number class="digit">0</button></td>
+            <td><button id="decimalBtn" class="digit">.</button></td>
+            <td><button id="delBtn" class="func">DEL</button></td>
+            <td><button id="equalBtn" class="operator">=</button></td>
         </tr>
     </table>
 </body>
