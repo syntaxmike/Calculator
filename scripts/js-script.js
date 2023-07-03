@@ -16,7 +16,7 @@ const MULTIPLY = (a, b) => { return a * b };
 const SUBTRACT = (a, b) => { return a - b };
 let firstInput = 0,
     secondInput = 0,
-    currentOperator = "",
+    currentOperator = '',
     boolResetScreen = false;
 
 
@@ -70,7 +70,6 @@ function calculateResult(op, a, b) {
 
 function calcPercent() {
     const num = +currentScreen.textContent;
-
     currentScreen.textContent = num / 100;
 }
 
@@ -91,6 +90,7 @@ function clearScreen() {
 function clearAllScreens() {
     currentScreen.textContent = '0';
     previousScreen.textContent = '';
+    currentOperator = '';
     boolResetScreen = false;
 }
 
@@ -121,9 +121,14 @@ function evaluate() {
 
 
 function setOperation(operator) {
-    firstInput = currentScreen.textContent;
-    currentOperator = operator;
-    previousScreen.textContent = `${firstInput} ${currentOperator}`;
-    boolResetScreen = true;
+    if(currentOperator === ''){
+        firstInput = currentScreen.textContent;
+        currentOperator = operator;
+        previousScreen.textContent = `${firstInput} ${currentOperator}`;
+        boolResetScreen = true;
+    } else {
+        currentOperator = operator;
+        previousScreen.textContent = `${firstInput} ${currentOperator}`;
+    }
     
 }
